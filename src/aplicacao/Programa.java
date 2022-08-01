@@ -18,7 +18,7 @@ public class Programa {
 		List<Produtos> list = new ArrayList<>();
 
 		try {
-			System.out.print("Agora digite o nome do arquivo que deseja vc deseja criar: ");
+			System.out.print("Digite o caminho do arquivo: ");
 			String nomeDoArquivo = sc.nextLine();
 
 			Produtos produtos = new Produtos();

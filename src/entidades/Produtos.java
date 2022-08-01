@@ -58,12 +58,12 @@ public class Produtos {
 	
 	//metodo para criar uma pasta e um arquivo texto
 	public void criandoArquivoDeTexto(String nomeDoArquivo) throws DominioExceptions {
-		File path1 = new File(nomeDoArquivo);
-		String caminho2 = path1.getParent();
+		File caminho = new File(nomeDoArquivo);
+		String caminho2 = caminho.getParent();
 		boolean criaPasta = new File(caminho2 + "\\out").mkdir();
 		String arqui = caminho2 + "\\out\\sumario.csv";
 		
-		if (path1.exists()) {
+		if (caminho.exists()) {
 			try (BufferedReader br = new BufferedReader(new FileReader(nomeDoArquivo))) {
 				String itens = br.readLine();
 				while (itens != null) {
